@@ -47,6 +47,14 @@
 <br/><br/>
 
 <div align="center">
+  <h3>⚡ Activity Graph</h3>
+  
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Anwarsadathh&theme=tokyo-night&hide_border=true&hide_title=false&area=true&custom_title=GitHub%20Activity%20Graph" alt="Activity Graph" />
+</div>
+
+<br/><br/>
+
+<div align="center">
   <h3>🛠️ Tech Stack</h3>
   
   <h4>Frontend</h4>
@@ -70,14 +78,6 @@
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
-</div>
-
-<br/><br/>
-
-<div align="center">
-  <h3>⚡ Activity</h3>
-  
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Anwarsadathh&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
 </div>
 
 <br/><br/>
