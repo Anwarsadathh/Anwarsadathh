@@ -64,7 +64,7 @@ const anwar = {
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css,nodejs,express,mongodb,postgres,prisma,redis,docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=dark&perline=12">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react%2Cnextjs%2Cts%2Cjs%2Credux%2Ctailwind%2Cmaterialui%2Chtml%2Ccss%2Cnodejs%2Cexpress%2Cmongodb%2Cpostgres%2Cprisma%2Credis%2Cdocker%2Caws%2Clinux%2Cnginx%2Cgithubactions%2Cvercel%2Ccloudflare%2Cgit&theme=dark&perline=12">
     <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css,nodejs,express,mongodb,postgres,prisma,redis,docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=light&perline=12" alt="Tech stack">
   </picture>
 </p>
