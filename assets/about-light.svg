@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="276" viewBox="0 0 880 276" fill="none" role="img" aria-label="About Anwar Sadath">
+<defs>
+  <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fbff"/><stop offset="1" stop-color="#eef3ff"/></linearGradient>
+  <linearGradient id="acard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f6f8fe"/></linearGradient>
+  <linearGradient id="aacc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0891b2"/><stop offset=".55" stop-color="#7c3aed"/><stop offset="1" stop-color="#059669"/></linearGradient>
+  <filter id="ablur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  <pattern id="adots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#0f172a" fill-opacity="0.1"/></pattern>
+  <radialGradient id="aglow" cx="0" cy="0" r="0.8"><stop offset="0" stop-color="#7c3aed" stop-opacity=".16"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+  text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Ubuntu, Arial, sans-serif}
+  .mono{font-family:'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo, monospace}
+  .fade{animation:fade .8s ease-out backwards}
+  .up{animation:up .9s cubic-bezier(.2,.8,.2,1) backwards}
+  @keyframes fade{from{opacity:0}}
+  @keyframes up{from{opacity:0;transform:translateY(10px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect x=".5" y=".5" width="879" height="275" rx="16" fill="url(#acard)" stroke="#dfe6f3"/>
+<rect x=".5" y=".5" width="879" height="275" rx="16" fill="url(#aglow)"/>
+<g class="up">
+  <text x="36" y="58" font-size="26" font-weight="800" fill="#0b1224" letter-spacing="-.5">Hi, I'm <tspan fill="url(#aacc)">Anwar</tspan></text>
+</g>
+<g class="up" style="animation-delay:.1s"><text x="36" y="92" font-size="14" fill="#55657f">I'm a full stack engineer who likes turning messy</text><text x="36" y="114" font-size="14" fill="#55657f">business workflows into fast, reliable products.</text><text x="36" y="136" font-size="14" fill="#55657f">Lately that means multi-tenant CRMs with strict</text><text x="36" y="158" font-size="14" fill="#55657f">data isolation, lead pipelines on Redis queues and</text><text x="36" y="180" font-size="14" fill="#55657f">WhatsApp / SMS integrations used by 1,100+ people.</text></g>
+<g class="up" style="animation-delay:.25s"><rect x="36" y="222" width="143.3" height="26" rx="13" fill="#eef2fb" stroke="#dfe6f3"/>
+<circle cx="49" cy="235" r="3.5" fill="#0891b2"/>
+<text x="58" y="239.5" font-size="12" font-weight="600" fill="#334155">clean data models</text><rect x="187.3" y="222" width="108.80000000000001" height="26" rx="13" fill="#eef2fb" stroke="#dfe6f3"/>
+<circle cx="200.3" cy="235" r="3.5" fill="#7c3aed"/>
+<text x="209.3" y="239.5" font-size="12" font-weight="600" fill="#334155">fast queries</text><rect x="304.1" y="222" width="122.60000000000001" height="26" rx="13" fill="#eef2fb" stroke="#dfe6f3"/>
+<circle cx="317.1" cy="235" r="3.5" fill="#059669"/>
+<text x="326.1" y="239.5" font-size="12" font-weight="600" fill="#334155">boring deploys</text></g>
+<line x1="440" y1="36" x2="440" y2="240" stroke="#dfe6f3"/>
+<g class="up" style="animation-delay:0.15s">
+  <rect x="470" y="42" width="3" height="26" rx="1.5" fill="#0891b2"/>
+  <text x="486" y="52" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#8795ad">ROLE</text>
+  <text x="486" y="67" font-size="13.5" font-weight="600" fill="#0b1224">Software Engineer @ ThinkerNational</text>
+</g><g class="up" style="animation-delay:0.22s">
+  <rect x="470" y="78" width="3" height="26" rx="1.5" fill="#7c3aed"/>
+  <text x="486" y="88" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#8795ad">BASED IN</text>
+  <text x="486" y="103" font-size="13.5" font-weight="600" fill="#0b1224">Bengaluru, India</text>
+</g><g class="up" style="animation-delay:0.29000000000000004s">
+  <rect x="470" y="114" width="3" height="26" rx="1.5" fill="#059669"/>
+  <text x="486" y="124" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#8795ad">EXPERIENCE</text>
+  <text x="486" y="139" font-size="13.5" font-weight="600" fill="#0b1224">4+ yrs building · 2+ yrs full-time</text>
+</g><g class="up" style="animation-delay:0.36s">
+  <rect x="470" y="150" width="3" height="26" rx="1.5" fill="#0891b2"/>
+  <text x="486" y="160" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#8795ad">FOCUS</text>
+  <text x="486" y="175" font-size="13.5" font-weight="600" fill="#0b1224">Multi-tenant SaaS · CRMs · EdTech</text>
+</g><g class="up" style="animation-delay:0.43000000000000005s">
+  <rect x="470" y="186" width="3" height="26" rx="1.5" fill="#7c3aed"/>
+  <text x="486" y="196" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#8795ad">CURRENTLY</text>
+  <text x="486" y="211" font-size="13.5" font-weight="600" fill="#0b1224">Scaling a CRM to 800+ leads/day</text>
+</g><g class="up" style="animation-delay:0.5s">
+  <rect x="470" y="222" width="3" height="26" rx="1.5" fill="#059669"/>
+  <text x="486" y="232" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#8795ad">EXPLORING</text>
+  <text x="486" y="247" font-size="13.5" font-weight="600" fill="#0b1224">LLM APIs · agentic workflows</text>
+</g>
+</svg>
