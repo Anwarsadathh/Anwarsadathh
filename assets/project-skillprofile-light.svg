@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="432" height="196" viewBox="0 0 432 196" fill="none" role="img" aria-label="SkillProfile.in">
+<defs>
+  <linearGradient id="p2bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fbff"/><stop offset="1" stop-color="#eef3ff"/></linearGradient>
+  <linearGradient id="p2card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f6f8fe"/></linearGradient>
+  <linearGradient id="p2acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0891b2"/><stop offset=".55" stop-color="#7c3aed"/><stop offset="1" stop-color="#059669"/></linearGradient>
+  <filter id="p2blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  <pattern id="p2dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#0f172a" fill-opacity="0.1"/></pattern>
+  <radialGradient id="p2glow" cx="1" cy="0" r="0.9"><stop offset="0" stop-color="#059669" stop-opacity=".22"/><stop offset="1" stop-color="#059669" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+  text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Ubuntu, Arial, sans-serif}
+  .mono{font-family:'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo, monospace}
+  .fade{animation:fade .8s ease-out backwards}
+  .up{animation:up .9s cubic-bezier(.2,.8,.2,1) backwards}
+  @keyframes fade{from{opacity:0}}
+  @keyframes up{from{opacity:0;transform:translateY(10px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect x=".5" y=".5" width="431" height="195" rx="16" fill="url(#p2card)" stroke="#dfe6f3"/>
+<rect x=".5" y=".5" width="431" height="195" rx="16" fill="url(#p2glow)"/>
+<rect x="28" y="0" width="56" height="3" rx="1.5" fill="#059669"/>
+<g class="up">
+  <text x="28" y="40" font-size="10.5" font-weight="700" letter-spacing="1.8" fill="#059669">SAAS · LIVE</text>
+  <text x="404" y="40" text-anchor="end" font-size="12" font-weight="600" fill="#55657f">skillprofile.in ↗</text>
+  <text x="28" y="74" font-size="23" font-weight="800" fill="#0b1224" letter-spacing="-.4">SkillProfile.in</text>
+</g>
+<g class="up" style="animation-delay:.12s"><text x="28" y="104" font-size="13.5" fill="#55657f">157-question career assessment with scoring,</text><text x="28" y="124" font-size="13.5" fill="#55657f">Razorpay payments and automated PDF reports.</text></g>
+<g class="up" style="animation-delay:.24s"><rect x="28" y="148" width="71" height="24" rx="7" fill="#eef2fb" stroke="#dfe6f3"/>
+<text x="63.5" y="164" text-anchor="middle" font-size="11.5" font-weight="600" class="mono" fill="#334155">Next.js</text><rect x="105" y="148" width="71" height="24" rx="7" fill="#eef2fb" stroke="#dfe6f3"/>
+<text x="140.5" y="164" text-anchor="middle" font-size="11.5" font-weight="600" class="mono" fill="#334155">Node.js</text><rect x="182" y="148" width="71" height="24" rx="7" fill="#eef2fb" stroke="#dfe6f3"/>
+<text x="217.5" y="164" text-anchor="middle" font-size="11.5" font-weight="600" class="mono" fill="#334155">MongoDB</text><rect x="259" y="148" width="78" height="24" rx="7" fill="#eef2fb" stroke="#dfe6f3"/>
+<text x="298" y="164" text-anchor="middle" font-size="11.5" font-weight="600" class="mono" fill="#334155">Razorpay</text></g>
+
+</svg>

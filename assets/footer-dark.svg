@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="120" viewBox="0 0 880 120" fill="none" role="img" aria-label="Thanks for visiting">
+<defs>
+  <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#070b16"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+  <linearGradient id="fcard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1324"/><stop offset="1" stop-color="#121c33"/></linearGradient>
+  <linearGradient id="facc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#a78bfa"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+  <filter id="fblur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  <pattern id="fdots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#ffffff" fill-opacity="0.1"/></pattern></defs>
+<style>
+  text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Ubuntu, Arial, sans-serif}
+  .mono{font-family:'SF Mono', 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo, monospace}
+  .fade{animation:fade .8s ease-out backwards}
+  .up{animation:up .9s cubic-bezier(.2,.8,.2,1) backwards}
+  @keyframes fade{from{opacity:0}}
+  @keyframes up{from{opacity:0;transform:translateY(10px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  .w1{animation:w 9s linear infinite}.w2{animation:w 13s linear infinite reverse}
+  @keyframes w{to{transform:translateX(-440px)}}
+</style>
+<g opacity=".55">
+  <path class="w1" d="M0 70 Q110 40 220 70 T440 70 T660 70 T880 70 T1100 70 T1320 70 V120 H0Z" fill="#22d3ee" fill-opacity=".18"/>
+  <path class="w2" d="M0 84 Q110 104 220 84 T440 84 T660 84 T880 84 T1100 84 T1320 84 V120 H0Z" fill="#a78bfa" fill-opacity=".18"/>
+</g>
+<text x="440" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="#eef3fb">Thanks for stopping by — let's build something great.</text>
+</svg>
