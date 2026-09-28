@@ -47,7 +47,7 @@ async function fetchData() {
       `query($login:String!,$after:String){ user(login:$login){
           repositories(first:100, after:$after, ownerAffiliations:OWNER, isFork:false){
             totalCount pageInfo{ hasNextPage endCursor }
-            nodes{ stargazerCount languages(first:10, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } } }
+            nodes{ stargazerCount pkg: object(expression:"HEAD:package.json"){ ... on Blob { text } } languages(first:10, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } } }
           } } }`,
       { login: USER, after: cursor }
     );
@@ -91,6 +91,7 @@ async function fetchData() {
     }
 
   return {
+    frameworks: detectFrameworks(repos.map((r) => r.pkg?.text).filter(Boolean)),
     createdAt: u.createdAt,
     followers: u.followers.totalCount,
     repos: u.repoCount,
@@ -99,6 +100,49 @@ async function fetchData() {
     days,
     langs: [...langMap.values()],
   };
+}
+
+
+// dependency name → [label, brand color]
+const FRAMEWORKS = [
+  [["react"], "React", "#61dafb"],
+  [["next"], "Next.js", null],
+  [["express"], "Express", "#9ca3af"],
+  [["mongoose", "mongodb"], "MongoDB", "#47a248"],
+  [["tailwindcss"], "Tailwind CSS", "#38bdf8"],
+  [["@reduxjs/toolkit", "redux", "react-redux"], "Redux", "#764abc"],
+  [["@tanstack/react-query", "react-query"], "React Query", "#ff4154"],
+  [["zustand"], "Zustand", "#c28a5c"],
+  [["prisma", "@prisma/client"], "Prisma", "#5a67d8"],
+  [["pg", "postgres", "sequelize"], "PostgreSQL", "#4169e1"],
+  [["redis", "ioredis", "bullmq", "bull"], "Redis", "#dc382d"],
+  [["@mui/material", "@material-ui/core"], "Material UI", "#007fff"],
+  [["bootstrap", "react-bootstrap"], "Bootstrap", "#7952b3"],
+  [["next-auth", "@auth/core"], "NextAuth", "#a855f7"],
+  [["jsonwebtoken", "jose"], "JWT", "#d63aff"],
+  [["socket.io", "socket.io-client"], "Socket.IO", "#94a3b8"],
+  [["express-handlebars", "hbs", "handlebars"], "Handlebars", "#f7931e"],
+  [["ejs"], "EJS", "#b4ca65"],
+  [["razorpay"], "Razorpay", "#3395ff"],
+  [["vite"], "Vite", "#a78bfa"],
+  [["typescript"], "TypeScript", "#3178c6"],
+];
+
+function detectFrameworks(pkgTexts) {
+  const counts = new Map();
+  for (const txt of pkgTexts) {
+    let pkg;
+    try { pkg = JSON.parse(txt); } catch { continue; }
+    const deps = new Set(Object.keys({ ...pkg.dependencies, ...pkg.devDependencies }));
+    for (const [keys, label, color] of FRAMEWORKS) {
+      if (keys.some((k) => deps.has(k))) {
+        const c = counts.get(label) || { name: label, color, count: 0 };
+        c.count++;
+        counts.set(label, c);
+      }
+    }
+  }
+  return { projects: pkgTexts.length, list: [...counts.values()].sort((a, b) => b.count - a.count) };
 }
 
 function mockData() {
@@ -114,6 +158,12 @@ function mockData() {
   const all = days.reduce((s, d) => s + d.contributionCount, 0);
   return {
     createdAt: "2022-08-06T00:00:00Z", followers: 12, repos: 48, stars: 9,
+    frameworks: { projects: 31, list: [
+      { name: "React", color: "#61dafb", count: 24 }, { name: "Express", color: "#9ca3af", count: 21 },
+      { name: "MongoDB", color: "#47a248", count: 20 }, { name: "Next.js", color: null, count: 12 },
+      { name: "Tailwind CSS", color: "#38bdf8", count: 11 }, { name: "JWT", color: "#d63aff", count: 10 },
+      { name: "Handlebars", color: "#f7931e", count: 7 }, { name: "Redux", color: "#764abc", count: 5 },
+    ] },
     totals: { commits: Math.round(all * 0.86), prs: 41, reviews: 17, issues: 6, restricted: 0, all },
     days,
     langs: [
@@ -227,7 +277,9 @@ function svgShell(t, w, h, body, id) {
   .ring{animation:ring 1.4s cubic-bezier(.2,.8,.2,1) backwards}
   @keyframes fade{from{opacity:0}}
   @keyframes grow{from{transform:scaleY(0)}}
-  @media (prefers-reduced-motion:reduce){.fade,.grow,.ring{animation:none}}
+  .growx{transform-box:fill-box;transform-origin:0 50%;animation:growx 1s cubic-bezier(.2,.8,.2,1) backwards}
+  @keyframes growx{from{transform:scaleX(0)}}
+  @media (prefers-reduced-motion:reduce){.fade,.grow,.growx,.ring{animation:none}}
   @keyframes ring{from{stroke-dashoffset:var(--c)}}
 </style>
 <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="16" fill="url(#${id}-bg)" stroke="${t.border}"/>
@@ -251,7 +303,7 @@ function ring(t, cx, cy, value, max, label, sub, color, delay) {
 }
 
 function renderOverview(s, t, id) {
-  const W = 880, H = 430;
+  const W = 880, H = 356;
   let b = "";
 
   // hero number
@@ -291,26 +343,6 @@ function renderOverview(s, t, id) {
     b += `<text x="${(x + bw / 2).toFixed(1)}" y="${chartTop + chartH + 18}" text-anchor="middle" font-size="11" font-weight="${cur ? 700 : 400}" fill="${cur ? t.a3 : t.muted}">${m.label}</text>`;
   });
 
-  // tiles
-  const tiles = [
-    ["commit", "Commits", s.totals.commits, t.a1],
-    ["pr", "Pull requests", s.totals.prs, t.a2],
-    ["review", "Code reviews", s.totals.reviews, t.a3],
-    ["issue", "Issues", s.totals.issues, t.a1],
-    ["repo", "Repositories", s.repos, t.a2],
-    ["star", "Stars earned", s.stars, t.a3],
-  ];
-  const ty = 348, gap = 10, tw = (cw - gap * (tiles.length - 1)) / tiles.length, th = 58;
-  tiles.forEach(([ic, label, val, col], i) => {
-    const x = cx0 + i * (tw + gap);
-    b += `<g class="fade" style="animation-delay:${0.9 + i * 0.07}s">
-  <rect x="${x.toFixed(1)}" y="${ty}" width="${tw.toFixed(1)}" height="${th}" rx="11" fill="${t.tile}" stroke="${t.tileBorder}"/>
-  <g transform="translate(${(x + 14).toFixed(1)} ${ty + 13}) scale(0.8)"><path d="${ICONS[ic]}" fill="${col}"/></g>
-  <text x="${(x + 33).toFixed(1)}" y="${ty + 23.5}" font-size="11" font-weight="600" fill="${t.muted}">${label}</text>
-  <text x="${(x + 14).toFixed(1)}" y="${ty + 46}" font-size="19" font-weight="800" fill="${t.text}">${fmt(val)}</text>
-</g>`;
-  });
-
   b += `<text x="${W - 36}" y="${H - 8}" text-anchor="end" font-size="9.5" fill="${t.muted}" opacity="0.7">updated ${new Date().toISOString().slice(0, 10)} · all-time, all years</text>`;
   return svgShell(t, W, H, b, id);
 }
@@ -342,6 +374,32 @@ function renderLangs(s, t, id) {
   return svgShell(t, W, H, b, id);
 }
 
+
+function renderFrameworks(s, t, id) {
+  const W = 880, list = s.frameworks.list.slice(0, 8);
+  const rows = Math.ceil(list.length / 2) || 1;
+  const H = 84 + rows * 40;
+  let b = `<text x="36" y="44" font-size="11.5" font-weight="700" fill="${t.muted}" letter-spacing="2.2">MOST USED FRAMEWORKS &amp; LIBRARIES</text>
+<text x="${W - 36}" y="44" text-anchor="end" font-size="11.5" fill="${t.muted}">found in ${fmt(s.frameworks.projects)} JavaScript projects</text>`;
+  if (!list.length) b += `<text x="36" y="90" font-size="13" fill="${t.muted}">No package.json files found yet.</text>`;
+  const max = Math.max(...list.map((f) => f.count), 1);
+  const colW = (W - 72 - 40) / 2, trackX = 140, trackW = colW - trackX - 72;
+  list.forEach((f, i) => {
+    const col = i % 2, row = Math.floor(i / 2);
+    const x = 36 + col * (colW + 40), y = 72 + row * 40;
+    const w = Math.max(6, (f.count / max) * trackW);
+    const color = f.color || t.text;
+    b += `<g class="fade" style="animation-delay:${0.1 + i * 0.07}s">
+  <circle cx="${x + 6}" cy="${y + 8}" r="5.5" fill="${color}"/>
+  <text x="${x + 20}" y="${y + 12.5}" font-size="13" font-weight="600" fill="${t.text}">${esc(f.name)}</text>
+  <rect x="${x + trackX}" y="${y + 3}" width="${trackW}" height="10" rx="5" fill="${t.faint}"/>
+  <rect class="growx" style="animation-delay:${0.2 + i * 0.07}s" x="${x + trackX}" y="${y + 3}" width="${w.toFixed(1)}" height="10" rx="5" fill="${color}"/>
+  <text x="${x + colW}" y="${y + 12.5}" text-anchor="end" font-size="12" fill="${t.muted}" class="mono">${f.count} ${f.count === 1 ? "repo" : "repos"}</text>
+</g>`;
+  });
+  return svgShell(t, W, H, b, id);
+}
+
 // ---------------------------------------------------------------- main
 
 const raw = MOCK ? mockData() : await fetchData();
@@ -350,6 +408,7 @@ mkdirSync(OUT, { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(join(OUT, `stats-${name}.svg`), renderOverview(stats, t, `o${name[0]}`));
   writeFileSync(join(OUT, `langs-${name}.svg`), renderLangs(stats, t, `l${name[0]}`));
+  writeFileSync(join(OUT, `frameworks-${name}.svg`), renderFrameworks(stats, t, `f${name[0]}`));
 }
 writeFileSync(join(OUT, "stats.json"), JSON.stringify({ ...stats, days: undefined }, null, 2));
 console.log(`total ${stats.totals.all} | last year ${stats.lastYear} | streak ${stats.current.len}/${stats.longest.len} | commits ${stats.totals.commits}`);
