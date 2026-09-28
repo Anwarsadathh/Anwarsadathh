@@ -77,13 +77,13 @@
 ## 📊 GitHub stats
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-dark.svg">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-dark.svg?v=2">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-light.svg?v=2" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-dark.svg">
-  <img alt="Most used languages" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-dark.svg?v=2">
+  <img alt="Most used languages" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-light.svg?v=2" width="100%">
 </picture>
 
 <details>
