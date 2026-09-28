@@ -15,7 +15,7 @@
 
 <br/>
 
-<a href="https://www.linkedin.com/in/anwar-sadath/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="https://www.linkedin.com/in/anwar-sadath-12ab5a248/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 <a href="mailto:anwaranu633@gmail.com"><img src="https://img.shields.io/badge/anwaranu633@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
 <a href="https://anwarsadath.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0F172A?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"/></a>
 <img src="https://visitor-badge.laobi.icu/badge?page_id=Anwarsadathh.Anwarsadathh&left_text=profile%20views&left_color=%230f172a&right_color=%2322d3ee" alt="Profile views"/>
@@ -77,13 +77,18 @@
 ## 📊 GitHub stats
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-dark.svg?v=2">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-light.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-dark.svg?v=3">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/stats-light.svg?v=3" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-dark.svg?v=2">
-  <img alt="Most used languages" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-light.svg?v=2" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-dark.svg?v=3">
+  <img alt="Most used languages" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/langs-light.svg?v=3" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/frameworks-dark.svg?v=3">
+  <img alt="Most used frameworks and libraries" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/output/frameworks-light.svg?v=3" width="100%">
 </picture>
 
 <details>
@@ -109,7 +114,7 @@
 ## 🤝 Let's connect
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/anwar-sadath/"><picture>
+  <a href="https://www.linkedin.com/in/anwar-sadath-12ab5a248/"><picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-linkedin-dark.svg">
     <img alt="LinkedIn" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-linkedin-light.svg" width="32%">
   </picture></a>
