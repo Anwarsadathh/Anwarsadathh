@@ -28,13 +28,13 @@
 
 ```ts
 const anwar = {
-  role:        "Software Engineer @ ThinkerNational Edu Syndicate",
-  location:    "Bengaluru, India 🇮🇳",
-  experience:  "4+ years building, 2+ years full-time in production",
-  focus:       ["Multi-tenant SaaS", "CRM & lead pipelines", "EdTech marketplaces"],
-  loves:       ["clean data models", "fast queries", "boring, reliable deploys"],
-  currently:   "Scaling an admissions CRM → 800+ leads/day across 500+ partners",
-  exploring:   ["LLM APIs", "prompt engineering", "agentic workflows"],
+  role:       "Software Engineer @ ThinkerNational",
+  location:   "Bengaluru, India",
+  experience: "4+ yrs building · 2+ yrs full-time",
+  focus:      ["Multi-tenant SaaS", "CRMs", "EdTech"],
+  loves:      ["clean data models", "fast queries"],
+  currently:  "Scaling a CRM → 800+ leads/day",
+  exploring:  ["LLM APIs", "agentic workflows"],
 };
 ```
 
@@ -62,46 +62,22 @@ const anwar = {
 
 ## 🛠️ Tech stack
 
-<table>
-  <tr>
-    <td width="130"><b>Frontend</b></td>
-    <td>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css&theme=dark">
-        <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css&theme=light" alt="Frontend">
-      </picture>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Backend &amp; data</b></td>
-    <td>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,prisma,redis&theme=dark">
-        <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,prisma,redis&theme=light" alt="Backend">
-      </picture>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Cloud &amp; DevOps</b></td>
-    <td>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=dark">
-        <img src="https://skillicons.dev/icons?i=docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=light" alt="DevOps">
-      </picture>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Integrations</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/WhatsApp_API-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
-      <img src="https://img.shields.io/badge/Meta_Lead_Ads-0467DF?style=flat-square&logo=meta&logoColor=white" alt="Meta"/>
-      <img src="https://img.shields.io/badge/Razorpay-0C2451?style=flat-square&logo=razorpay&logoColor=white" alt="Razorpay"/>
-      <img src="https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white" alt="Twilio"/>
-      <img src="https://img.shields.io/badge/Resend-000000?style=flat-square&logo=resend&logoColor=white" alt="Resend"/>
-      <img src="https://img.shields.io/badge/LLM_APIs-412991?style=flat-square&logo=openai&logoColor=white" alt="LLM APIs"/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css,nodejs,express,mongodb,postgres,prisma,redis,docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=dark&perline=12">
+    <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css,nodejs,express,mongodb,postgres,prisma,redis,docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=light&perline=12" alt="Tech stack">
+  </picture>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/WhatsApp_API-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
+  <img src="https://img.shields.io/badge/Meta_Lead_Ads-0467DF?style=flat-square&logo=meta&logoColor=white" alt="Meta"/>
+  <img src="https://img.shields.io/badge/Razorpay-0C2451?style=flat-square&logo=razorpay&logoColor=white" alt="Razorpay"/>
+  <img src="https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white" alt="Twilio"/>
+  <img src="https://img.shields.io/badge/Exotel-0055A5?style=flat-square" alt="Exotel"/>
+  <img src="https://img.shields.io/badge/Resend-000000?style=flat-square&logo=resend&logoColor=white" alt="Resend"/>
+  <img src="https://img.shields.io/badge/LLM_APIs-412991?style=flat-square&logo=openai&logoColor=white" alt="LLM APIs"/>
+</p>
 
 <br/>
 
