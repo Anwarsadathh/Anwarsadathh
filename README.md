@@ -26,17 +26,10 @@
 
 ## 👋 About me
 
-```ts
-const anwar = {
-  role:       "Software Engineer @ ThinkerNational",
-  location:   "Bengaluru, India",
-  experience: "4+ yrs building · 2+ yrs full-time",
-  focus:      ["Multi-tenant SaaS", "CRMs", "EdTech"],
-  loves:      ["clean data models", "fast queries"],
-  currently:  "Scaling a CRM → 800+ leads/day",
-  exploring:  ["LLM APIs", "agentic workflows"],
-};
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/about-dark.svg">
+  <img alt="About Anwar: Software Engineer at ThinkerNational, Bengaluru. Builds multi-tenant SaaS, CRMs and EdTech platforms." src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/about-light.svg" width="100%">
+</picture>
 
 <br/>
 
