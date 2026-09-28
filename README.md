@@ -3,8 +3,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="Anwar Sadath — Full Stack Engineer" src="assets/header-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/header-dark.svg">
+  <img alt="Anwar Sadath — Full Stack Engineer" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/header-light.svg" width="100%">
 </picture>
 
 <br/>
@@ -43,18 +43,18 @@ const anwar = {
 ## 🚀 Featured work
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/project-crm-dark.svg">
-  <img alt="Multi-tenant Admissions CRM" src="assets/project-crm-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/project-crm-dark.svg">
+  <img alt="Multi-tenant Admissions CRM" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/project-crm-light.svg" width="100%">
 </picture>
 
 <p>
   <a href="https://learnscapeedu.com"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/project-learnscape-dark.svg">
-    <img alt="LearnScape Edu" src="assets/project-learnscape-light.svg" width="49%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/project-learnscape-dark.svg">
+    <img alt="LearnScape Edu" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/project-learnscape-light.svg" width="49%">
   </picture></a>
   <a href="https://skillprofile.in"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/project-skillprofile-dark.svg">
-    <img alt="SkillProfile.in" src="assets/project-skillprofile-light.svg" width="49%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/project-skillprofile-dark.svg">
+    <img alt="SkillProfile.in" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/project-skillprofile-light.svg" width="49%">
   </picture></a>
 </p>
 
@@ -141,20 +141,20 @@ const anwar = {
 
 <p align="center">
   <a href="https://www.linkedin.com/in/anwar-sadath/"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/btn-linkedin-dark.svg">
-    <img alt="LinkedIn" src="assets/btn-linkedin-light.svg" width="32%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-linkedin-dark.svg">
+    <img alt="LinkedIn" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-linkedin-light.svg" width="32%">
   </picture></a>
   <a href="mailto:anwaranu633@gmail.com"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/btn-email-dark.svg">
-    <img alt="Email" src="assets/btn-email-light.svg" width="32%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-email-dark.svg">
+    <img alt="Email" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-email-light.svg" width="32%">
   </picture></a>
   <a href="https://anwarsadath.vercel.app"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/btn-portfolio-dark.svg">
-    <img alt="Portfolio" src="assets/btn-portfolio-light.svg" width="32%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-portfolio-dark.svg">
+    <img alt="Portfolio" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/btn-portfolio-light.svg" width="32%">
   </picture></a>
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
-  <img alt="Thanks for visiting" src="assets/footer-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/footer-dark.svg">
+  <img alt="Thanks for visiting" src="https://raw.githubusercontent.com/Anwarsadathh/Anwarsadathh/main/assets/footer-light.svg" width="100%">
 </picture>
