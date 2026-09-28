@@ -68,7 +68,7 @@ const anwar = {
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css&theme=dark">
-        <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css&theme=light" alt="Frontend" height="40">
+        <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,redux,tailwind,materialui,html,css&theme=light" alt="Frontend">
       </picture>
     </td>
   </tr>
@@ -77,7 +77,7 @@ const anwar = {
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,prisma,redis&theme=dark">
-        <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,prisma,redis&theme=light" alt="Backend" height="40">
+        <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,prisma,redis&theme=light" alt="Backend">
       </picture>
     </td>
   </tr>
@@ -86,7 +86,7 @@ const anwar = {
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=dark">
-        <img src="https://skillicons.dev/icons?i=docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=light" alt="DevOps" height="40">
+        <img src="https://skillicons.dev/icons?i=docker,aws,linux,nginx,githubactions,vercel,cloudflare,git&theme=light" alt="DevOps">
       </picture>
     </td>
   </tr>
