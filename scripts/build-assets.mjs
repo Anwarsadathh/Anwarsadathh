@@ -204,7 +204,7 @@ ${metrics}
 // ------------------------------------------------------------------ connect buttons
 const BUTTONS = [
   {
-    file: "btn-linkedin", label: "LinkedIn", sub: "in/anwar-sadath", color: "#0a66c2",
+    file: "btn-linkedin", label: "LinkedIn", sub: "in/anwar-sadath-12ab5a248", color: "#0a66c2",
     icon: (c) => `<rect x="0" y="0" width="20" height="20" rx="4" fill="${c}"/><text x="10" y="15" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">in</text>`,
   },
   {
