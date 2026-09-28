@@ -182,10 +182,12 @@ const THEMES = {
   dark: {
     bg1: "#0b1120", bg2: "#111a2e", border: "#1e2a44", text: "#e6edf7", muted: "#8a97b0", faint: "#1a2540",
     tile: "#0f1729", tileBorder: "#1c2842", a1: "#22d3ee", a2: "#a78bfa", a3: "#34d399", grid: "#17223a",
+    barLo: "#0e7490", barHi: "#67e8f9", barNowLo: "#059669", barNowHi: "#6ee7b7", track: "#121b2f",
   },
   light: {
     bg1: "#ffffff", bg2: "#f5f8ff", border: "#dfe6f3", text: "#0f172a", muted: "#5b6b86", faint: "#e8eef9",
     tile: "#ffffff", tileBorder: "#e3e9f5", a1: "#0891b2", a2: "#7c3aed", a3: "#059669", grid: "#edf1f8",
+    barLo: "#0891b2", barHi: "#67e8f9", barNowLo: "#059669", barNowHi: "#34d399", track: "#eef3fa",
   },
 };
 
@@ -213,7 +215,8 @@ function svgShell(t, w, h, body, id) {
 <defs>
   <linearGradient id="${id}-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${t.bg1}"/><stop offset="1" stop-color="${t.bg2}"/></linearGradient>
   <linearGradient id="${id}-acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${t.a1}"/><stop offset="0.55" stop-color="${t.a2}"/><stop offset="1" stop-color="${t.a3}"/></linearGradient>
-  <linearGradient id="${id}-bar" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${t.a2}"/><stop offset="1" stop-color="${t.a1}"/></linearGradient>
+  <linearGradient id="${id}-bar" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${t.barLo}"/><stop offset="1" stop-color="${t.barHi}"/></linearGradient>
+  <linearGradient id="${id}-now" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${t.barNowLo}"/><stop offset="1" stop-color="${t.barNowHi}"/></linearGradient>
   <radialGradient id="${id}-glow" cx="0.12" cy="0" r="0.7"><stop offset="0" stop-color="${t.a1}" stop-opacity="0.14"/><stop offset="1" stop-color="${t.a1}" stop-opacity="0"/></radialGradient>
 </defs>
 <style>
@@ -281,9 +284,11 @@ function renderOverview(s, t, id) {
   s.months.forEach((m, i) => {
     const h = Math.max(3, (m.count / maxM) * (chartH - 14));
     const x = cx0 + i * slot + (slot - bw) / 2, y = chartTop + chartH - h;
-    b += `<rect class="grow" style="animation-delay:${0.35 + i * 0.05}s" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="6" fill="url(#${id}-bar)" opacity="${i === 11 ? 1 : 0.85}"/>`;
+    const cur = i === s.months.length - 1;
+    b += `<rect x="${x.toFixed(1)}" y="${chartTop}" width="${bw.toFixed(1)}" height="${chartH}" rx="6" fill="${t.track}"/>`;
+    b += `<rect class="grow" style="animation-delay:${0.35 + i * 0.05}s" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="6" fill="url(#${id}-${cur ? "now" : "bar"})"/>`;
     b += `<text class="fade" style="animation-delay:${0.6 + i * 0.05}s" x="${(x + bw / 2).toFixed(1)}" y="${(y - 6).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="${t.text}">${m.count ? fmt(m.count) : ""}</text>`;
-    b += `<text x="${(x + bw / 2).toFixed(1)}" y="${chartTop + chartH + 18}" text-anchor="middle" font-size="11" fill="${t.muted}">${m.label}</text>`;
+    b += `<text x="${(x + bw / 2).toFixed(1)}" y="${chartTop + chartH + 18}" text-anchor="middle" font-size="11" font-weight="${cur ? 700 : 400}" fill="${cur ? t.a3 : t.muted}">${m.label}</text>`;
   });
 
   // tiles

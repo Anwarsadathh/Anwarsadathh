@@ -232,6 +232,55 @@ function button(b, t, idx) {
 </svg>`;
 }
 
+
+// ------------------------------------------------------------------ about card
+function about(t) {
+  const W = 880, H = 276, id = "a";
+  const facts = [
+    ["ROLE", "Software Engineer @ ThinkerNational", t.a1],
+    ["BASED IN", "Bengaluru, India", t.a2],
+    ["EXPERIENCE", "4+ yrs building · 2+ yrs full-time", t.a3],
+    ["FOCUS", "Multi-tenant SaaS · CRMs · EdTech", t.a1],
+    ["CURRENTLY", "Scaling a CRM to 800+ leads/day", t.a2],
+    ["EXPLORING", "LLM APIs · agentic workflows", t.a3],
+  ];
+  const fx = 470, fy = 42, rowH = 36;
+  let rows = "";
+  facts.forEach(([k, v, c], i) => {
+    const y = fy + i * rowH;
+    rows += `<g class="up" style="animation-delay:${0.15 + i * 0.07}s">
+  <rect x="${fx}" y="${y}" width="3" height="26" rx="1.5" fill="${c}"/>
+  <text x="${fx + 16}" y="${y + 10}" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="${t.dim}">${k}</text>
+  <text x="${fx + 16}" y="${y + 25}" font-size="13.5" font-weight="600" fill="${t.text}">${esc(v)}</text>
+</g>`;
+  });
+  const para = [
+    "I'm a full stack engineer who likes turning messy",
+    "business workflows into fast, reliable products.",
+    "Lately that means multi-tenant CRMs with strict",
+    "data isolation, lead pipelines on Redis queues and",
+    "WhatsApp / SMS integrations used by 1,100+ people.",
+  ];
+  const loves = ["clean data models", "fast queries", "boring deploys"];
+  let lx = 36, chips = "";
+  loves.forEach((l, i) => { const c = chip(t, lx, 222, l, [t.a1, t.a2, t.a3][i]); chips += c.svg; lx += c.w + 8; });
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none" role="img" aria-label="About Anwar Sadath">
+<defs>${defs(t, id)}
+  <radialGradient id="${id}glow" cx="0" cy="0" r="0.8"><stop offset="0" stop-color="${t.a2}" stop-opacity=".16"/><stop offset="1" stop-color="${t.a2}" stop-opacity="0"/></radialGradient>
+</defs>
+<style>${baseStyle}</style>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="16" fill="url(#${id}card)" stroke="${t.border}"/>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="16" fill="url(#${id}glow)"/>
+<g class="up">
+  <text x="36" y="58" font-size="26" font-weight="800" fill="${t.text}" letter-spacing="-.5">Hi, I'm <tspan fill="url(#${id}acc)">Anwar</tspan></text>
+</g>
+<g class="up" style="animation-delay:.1s">${para.map((l, i) => `<text x="36" y="${92 + i * 22}" font-size="14" fill="${t.muted}">${esc(l)}</text>`).join("")}</g>
+<g class="up" style="animation-delay:.25s">${chips}</g>
+<line x1="440" y1="36" x2="440" y2="${H - 36}" stroke="${t.border}"/>
+${rows}
+</svg>`;
+}
+
 // ------------------------------------------------------------------ footer
 function footer(t) {
   const W = 880, H = 120, id = "f";
@@ -253,6 +302,7 @@ function footer(t) {
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(`${OUT}/header-${name}.svg`, header(t));
   writeFileSync(`${OUT}/footer-${name}.svg`, footer(t));
+  writeFileSync(`${OUT}/about-${name}.svg`, about(t));
   PROJECTS.forEach((p, i) => writeFileSync(`${OUT}/${p.file}-${name}.svg`, projectCard(p, t, i)));
   BUTTONS.forEach((b, i) => writeFileSync(`${OUT}/${b.file}-${name}.svg`, button(b, t, i)));
 }
