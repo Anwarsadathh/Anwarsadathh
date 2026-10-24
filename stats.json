@@ -1,0 +1,212 @@
+{
+  "frameworks": {
+    "projects": 9,
+    "list": [
+      {
+        "name": "React",
+        "color": "#61dafb",
+        "count": 7
+      },
+      {
+        "name": "Next.js",
+        "color": null,
+        "count": 5
+      },
+      {
+        "name": "Tailwind CSS",
+        "color": "#38bdf8",
+        "count": 5
+      },
+      {
+        "name": "TypeScript",
+        "color": "#3178c6",
+        "count": 5
+      },
+      {
+        "name": "MongoDB",
+        "color": "#47a248",
+        "count": 4
+      },
+      {
+        "name": "Razorpay",
+        "color": "#3395ff",
+        "count": 3
+      },
+      {
+        "name": "Express",
+        "color": "#9ca3af",
+        "count": 2
+      },
+      {
+        "name": "Handlebars",
+        "color": "#f7931e",
+        "count": 2
+      },
+      {
+        "name": "JWT",
+        "color": "#d63aff",
+        "count": 2
+      }
+    ]
+  },
+  "createdAt": "2022-08-06T09:08:14Z",
+  "followers": 0,
+  "repos": 23,
+  "stars": 0,
+  "totals": {
+    "commits": 260,
+    "prs": 0,
+    "reviews": 0,
+    "issues": 0,
+    "restricted": 1939,
+    "all": 2227
+  },
+  "langs": [
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "size": 686539
+    },
+    {
+      "name": "CSS",
+      "color": "#663399",
+      "size": 486776
+    },
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "size": 2976368
+    },
+    {
+      "name": "PHP",
+      "color": "#4F5D95",
+      "size": 2600
+    },
+    {
+      "name": "Handlebars",
+      "color": "#f7931e",
+      "size": 999662
+    },
+    {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "size": 2201380
+    }
+  ],
+  "current": {
+    "len": 3,
+    "start": "2026-10-21",
+    "end": "2026-10-23"
+  },
+  "longest": {
+    "len": 17,
+    "start": "2026-06-18",
+    "end": "2026-07-04"
+  },
+  "lastYear": 695,
+  "months": [
+    {
+      "key": "2025-11",
+      "label": "Nov",
+      "count": 19
+    },
+    {
+      "key": "2025-12",
+      "label": "Dec",
+      "count": 63
+    },
+    {
+      "key": "2026-01",
+      "label": "Jan",
+      "count": 55
+    },
+    {
+      "key": "2026-02",
+      "label": "Feb",
+      "count": 83
+    },
+    {
+      "key": "2026-03",
+      "label": "Mar",
+      "count": 43
+    },
+    {
+      "key": "2026-04",
+      "label": "Apr",
+      "count": 72
+    },
+    {
+      "key": "2026-05",
+      "label": "May",
+      "count": 66
+    },
+    {
+      "key": "2026-06",
+      "label": "Jun",
+      "count": 55
+    },
+    {
+      "key": "2026-07",
+      "label": "Jul",
+      "count": 65
+    },
+    {
+      "key": "2026-08",
+      "label": "Aug",
+      "count": 21
+    },
+    {
+      "key": "2026-09",
+      "label": "Sep",
+      "count": 35
+    },
+    {
+      "key": "2026-10",
+      "label": "Oct",
+      "count": 105
+    }
+  ],
+  "firstActive": "2022-08-06",
+  "bestDay": {
+    "date": "2026-10-22",
+    "contributionCount": 26
+  },
+  "langsTop": [
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "size": 2976368,
+      "pct": 40.47649192712141
+    },
+    {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "size": 2201380,
+      "pct": 29.937205277884495
+    },
+    {
+      "name": "Handlebars",
+      "color": "#f7931e",
+      "size": 999662,
+      "pct": 13.594693556996324
+    },
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "size": 686539,
+      "pct": 9.336443037673433
+    },
+    {
+      "name": "CSS",
+      "color": "#663399",
+      "size": 486776,
+      "pct": 6.619808046019998
+    },
+    {
+      "name": "PHP",
+      "color": "#4F5D95",
+      "size": 2600,
+      "pct": 0.035358154304345316
+    }
+  ]
+}
